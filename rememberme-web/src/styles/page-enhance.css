@@ -1,0 +1,119 @@
+.grave-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.grave-card:hover {
+  transform: translateY(-4px);
+}
+
+.grave-card-cover {
+  position: relative;
+  height: 140px;
+  overflow: hidden;
+}
+
+.grave-card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grave-card-cover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+.grave-card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.grave-card-placeholder {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: rgba(255,255,255,0.6);
+}
+
+.grave-card-body {
+  padding: 12px 16px;
+}
+
+.deceased-card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.deceased-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.deceased-card .deceased-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #f0f0f0;
+}
+
+.deceased-card .epitaph {
+  font-style: italic;
+  color: #8a8a8a;
+  border-left: 3px solid var(--primary-color, #1a5632);
+  padding-left: 12px;
+  margin-top: 8px;
+}
+
+.record-timeline .ant-timeline-item-content {
+  margin-left: 16px;
+}
+
+.memorial-record-card {
+  margin-bottom: 4px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+  background: #fff;
+}
+
+.memorial-record-card .record-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.memorial-record-card .record-message {
+  margin-top: 6px;
+  padding: 8px 12px;
+  background: #faf8f5;
+  border-radius: 6px;
+  border-left: 3px solid var(--primary-color, #1a5632);
+  color: #5a5a6e;
+  font-style: italic;
+}
+
+.memorial-record-card .record-time {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+}
+
+/* Timeline customization */
+.ant-timeline .ant-timeline-item-head {
+  background: #fff;
+}

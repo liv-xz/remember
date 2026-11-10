@@ -1,0 +1,14 @@
+memorial_album
+├── id        BIGINT PK
+├── grave_id  BIGINT FK→grave
+├── deceased_id BIGINT FK→deceased [可空]
+├── title     VARCHAR(100)
+├── cover_url VARCHAR(500)
+└── created_at DATETIME
+memorial_photo
+├── id          BIGINT PK
+├── album_id    BIGINT FK→album
+├── url         VARCHAR(500)
+├── description TEXT
+├── sort_order  INT
+└── created_at  DATETIME

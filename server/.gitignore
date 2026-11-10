@@ -1,0 +1,40 @@
+# ── 编译产物 ──
+*.exe
+*.exe~
+
+# ── 日志文件 ──
+*.log
+initialize_logs/*.log
+
+# ── 敏感配置 ──
+.env
+*.pem
+*.key
+
+# ── Go 相关 ──
+*.test
+coverage.out
+*.prof
+vendor/
+tmp/
+
+# ── IDE / 编辑器 ──
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── 操作系统 ──
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# ── 文档 ──
+docs/
+
+# ── 上传文件 ──
+uploads/
+
+# ── 误创建文件 ──
+nul

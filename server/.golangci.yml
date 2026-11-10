@@ -1,0 +1,33 @@
+linters:
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    - gofmt
+    - goimports
+    - misspell
+    - unconvert
+    - unparam
+    - gocritic
+
+linters-settings:
+  errcheck:
+    check-blank: false
+    exclude-functions:
+      - (*github.com/gin-gonic/gin.Context).Get
+  gocritic:
+    disabled-checks:
+      - rangeValCopy
+      - hugeParam
+      - unnamedResult
+    enabled-tags:
+      - diagnostic
+      - performance
+      - experimental
+
+run:
+  timeout: 5m
+  tests: false

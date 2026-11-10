@@ -1,0 +1,206 @@
+/* ===== RememberMe 响应式断点系统 =====
+ * 断点: 375px(手机小屏) / 768px(平板) / 1024px(桌面小) / 1440px(桌面大)
+ * 移动优先: 默认样式为移动端, 通过 min-width 逐层增强
+ */
+
+/* ---------- 全局触摸优化 ---------- */
+
+@media (max-width: 768px) {
+  body {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .ant-btn {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+
+  .ant-input,
+  .ant-input-password,
+  .ant-select-selector {
+    min-height: 44px !important;
+  }
+
+  .ant-radio-wrapper,
+  .ant-checkbox-wrapper {
+    min-height: 40px;
+    line-height: 40px;
+  }
+}
+
+/* ---------- 登录/注册页 ---------- */
+
+@media (max-width: 768px) {
+  .auth-card {
+    width: 100%;
+    padding: 28px 20px;
+    border-radius: 12px 12px 0 0;
+    margin: 0;
+  }
+
+  .auth-page {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .auth-brand h1 {
+    font-size: 24px;
+  }
+
+  .auth-brand p {
+    font-size: 13px;
+  }
+}
+
+/* ---------- 墓园列表 (Dashboard) ---------- */
+
+@media (max-width: 768px) {
+  .grave-card-cover {
+    height: 120px;
+  }
+
+  .grave-card-title {
+    font-size: 16px;
+  }
+}
+
+/* ---------- 墓园详情页 header ---------- */
+
+@media (max-width: 768px) {
+  .grave-detail-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .grave-detail-header .ant-space:last-child {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .grave-detail-header .ant-btn {
+    flex: 1;
+  }
+}
+
+/* ---------- 个人资料页 ---------- */
+
+@media (max-width: 768px) {
+  .profile-container {
+    max-width: 100% !important;
+    padding: 0 8px;
+  }
+}
+
+/* ---------- AppLayout 侧栏 ---------- */
+
+@media (max-width: 768px) {
+  .ant-layout-content {
+    margin: 8px !important;
+    padding: 16px 12px !important;
+    border-radius: 8px !important;
+  }
+}
+
+/* ---------- 表格, 表单 ---------- */
+
+@media (max-width: 768px) {
+  .ant-table {
+    font-size: 13px;
+  }
+
+  .ant-descriptions-view {
+    font-size: 13px;
+  }
+
+  .ant-form-vertical .ant-form-item-label {
+    padding-bottom: 2px;
+  }
+
+  .ant-modal {
+    max-width: calc(100vw - 32px);
+    margin: 16px auto;
+  }
+
+  .ant-modal-body {
+    padding: 16px;
+  }
+}
+
+/* ---------- 逝者卡片 ---------- */
+
+@media (max-width: 768px) {
+  .deceased-card {
+    padding: 16px;
+  }
+
+  .deceased-avatar {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* ---------- 成员管理页 ---------- */
+
+@media (max-width: 768px) {
+  .member-page-header {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start !important;
+  }
+}
+
+/* ---------- Tab 横向滚动 ---------- */
+
+@media (max-width: 768px) {
+  .ant-tabs-nav {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ant-tabs-tab {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+/* ---------- 关系图卡片(移动端缩小) ---------- */
+
+@media (max-width: 768px) {
+  .rg-card {
+    width: 100px !important;
+    height: 52px !important;
+  }
+
+  .rg-card-name {
+    font-size: 11px !important;
+    max-width: 86px !important;
+  }
+
+  .rg-card-life {
+    font-size: 10px !important;
+  }
+}
+
+/* ---------- 平板横屏增强 ---------- */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .auth-card {
+    width: 380px;
+  }
+}
+
+/* ---------- 桌面大屏优化 ---------- */
+
+@media (min-width: 1440px) {
+  .ant-layout-content {
+    max-width: 1200px;
+    margin: 24px auto !important;
+  }
+
+  .profile-container {
+    max-width: 720px !important;
+  }
+}

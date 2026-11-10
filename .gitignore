@@ -1,0 +1,57 @@
+# ── 文档：仅保留 README ──
+*.md
+!README.md
+
+# ── 未上传的模块 ──
+rememberme-admin/
+rememberme-miniapp/
+record/
+
+# ── 依赖 ──
+node_modules/
+
+# ── 构建产物 ──
+dist/
+build/
+.swc/
+*.tsbuildinfo
+
+# ── 环境变量（包含真实密钥，只保留示例文件）──
+.env
+.env.*
+!.env.example
+
+# ── Go 编译产物 / 测试产物 ──
+*.exe
+*.exe~
+*.test
+coverage.out
+*.prof
+server/server.exe
+
+# ── 上传文件 ──
+server/uploads/
+
+# ── 日志 ──
+*.log
+server/logs/
+server/initialize_logs/
+
+# ── IDE / 编辑器 ──
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── 操作系统 ──
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# ── 临时 / 垃圾文件 ──
+nul
+path-backup-*.txt
+
+# ── 旧 Git 历史备份 ──
+.git-backup*/

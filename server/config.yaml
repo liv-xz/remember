@@ -1,0 +1,46 @@
+database:
+  host: localhost
+  port: 3306
+  user: root
+  password: ""
+  name: RememberMe
+  debug: true
+  source: mysql
+
+app:
+  name: RememberMe
+  host: 0.0.0.0
+  port: 8080
+  env: dev
+  gin_mode: debug
+  allowed_origins:
+    - "http://localhost:3000"
+    - "http://localhost:5173"
+  wx_app_id: ""
+  wx_app_secret: ""
+
+jwt:
+  secret: ""
+  access_expire: 15
+  refresh_expire: 7
+
+upload:
+  dir: ./uploads
+  max_size: 5
+  allowed_types:
+    - image/jpeg
+    - image/png
+    - image/webp
+
+rate_limit:
+  enable: true
+  auth_rate: 5
+  auth_burst: 10
+  general_rate: 60
+  general_burst: 100
+
+redis:
+  host: localhost
+  port: 6379
+  password: ""
+  db: 0
