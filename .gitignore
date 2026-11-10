@@ -55,3 +55,6 @@ path-backup-*.txt
 
 # ── 旧 Git 历史备份 ──
 .git-backup*/
+
+# ── 误创建的笔记文件 ──
+server/model/memorial_album/memorial_photo
